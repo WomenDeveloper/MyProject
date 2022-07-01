@@ -1,0 +1,22 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Abstarct\" />
+    <None Remove="Concreate\" />
+    <None Remove="Concreate\EntityFramework\" />
+    <None Remove="Concreate\InMemory\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Abstract\" />
+    <Folder Include="Concreate\" />
+    <Folder Include="Concreate\EntityFramework\" />
+    <Folder Include="Concreate\InMemory\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Entities\Entities.csproj" />
+  </ItemGroup>
+</Project>
