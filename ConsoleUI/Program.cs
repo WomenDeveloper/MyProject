@@ -5,9 +5,20 @@ using DataAccess.Concreate.InMemory;
 using Entities.Concreate;
 
 //ProductManager productManager = new ProductManager(new InMemoryProductDal());
-ProductManager productManager = new ProductManager(new EfProductDal());
-foreach (Product p in productManager.GetByUnitPrice(2,500))
+//ProductTest();
+
+CategoryManager categoryManager = new CategoryManager(new EfCategoryDal());
+foreach (Category c in categoryManager.GetAll())
 {
-    Console.WriteLine(p.ProductName);
+    Console.WriteLine(c.CategoryName);
+}
+
+static void ProductTest()
+{
+    ProductManager productManager = new ProductManager(new EfProductDal());
+    foreach (Product p in productManager.GetByUnitPrice(2, 500))
+    {
+        Console.WriteLine(p.ProductName);
+    }
 }
 
