@@ -14,11 +14,11 @@ namespace DataAccess.Concreate.InMemory
         {
             _products = new List<Product>
             {
-                new Product{ProductId=1,CategoryId=1, ProductName="Bag",UnitPrice=45,UnitInStock=900},
-                new Product{ProductId=2,CategoryId=2, ProductName="Camera",UnitPrice=1500,UnitInStock=150},
-                new Product{ProductId=3,CategoryId=1, ProductName="Macbook",UnitPrice=1450,UnitInStock=250},
-                new Product{ProductId=4,CategoryId=1, ProductName="Pencil",UnitPrice=10,UnitInStock=200},
-                new Product{ProductId=5,CategoryId=1, ProductName="Book",UnitPrice=15,UnitInStock=400},
+                new Product{ProductId=1,CategoryId=1, ProductName="Bag",UnitPrice=45,UnitsInStock=900},
+                new Product{ProductId=2,CategoryId=2, ProductName="Camera",UnitPrice=1500,UnitsInStock=150},
+                new Product{ProductId=3,CategoryId=1, ProductName="Macbook",UnitPrice=1450,UnitsInStock=250},
+                new Product{ProductId=4,CategoryId=1, ProductName="Pencil",UnitPrice=10,UnitsInStock=200},
+                new Product{ProductId=5,CategoryId=1, ProductName="Book",UnitPrice=15,UnitsInStock=400},
             };
         }
 
@@ -54,7 +54,7 @@ namespace DataAccess.Concreate.InMemory
             productToUpdate.ProductName = product.ProductName;
             productToUpdate.CategoryId = product.CategoryId;
             productToUpdate.UnitPrice = product.UnitPrice;
-            productToUpdate.UnitPrice = product.UnitInStock;
+            productToUpdate.UnitPrice = product.UnitsInStock;
 
         }
 
