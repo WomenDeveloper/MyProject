@@ -4,7 +4,7 @@ using Microsoft.EntityFrameworkCore;
 
 namespace DataAccess.Concreate.EntityFramework
 {   //contex : tie the database table and the classes of project
-    public class NortwindContext : DbContext
+    public class NorthwindContext : DbContext
     {
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {

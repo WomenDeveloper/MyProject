@@ -36,7 +36,7 @@ namespace DataAccess.Concreate.EntityFramework
 
         public Product Get(Expression<Func<Product, bool>> filter)
         {
-            using (NortwindContext contex = new NortwindContext())
+            using (NorthwindContext contex = new NorthwindContext())
             {
                 return contex.Set<Product>().SingleOrDefault(filter);
             }
@@ -44,7 +44,7 @@ namespace DataAccess.Concreate.EntityFramework
 
         public List<Product> GetAll(Expression<Func<Product, bool>> filter = null)
         {
-            using (NortwindContext contex = new NortwindContext())
+            using (NorthwindContext contex = new NorthwindContext())
             {
                 return filter == null
                     ? contex.Set<Product>().ToList()
@@ -59,7 +59,7 @@ namespace DataAccess.Concreate.EntityFramework
 
         public void Update(Product entity)
         {
-            using (NortwindContext contex = new NortwindContext())
+            using (NorthwindContext contex = new NorthwindContext())
             {
                 var updatedEntity = contex.Entry(entity);
                 updatedEntity.State = EntityState.Deleted;
